@@ -79,39 +79,40 @@ public class login extends AppCompatActivity {
                 String cpf = etCpf.getText().toString();
                 String senha = etSenha.getText().toString();
 
+                 if (cpf.isEmpty() || senha.isEmpty() || situacao.equals(null)){
+                    Toast.makeText(getApplicationContext(), "Todos os campos devem ser preenchidos", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                try {
-                    Connection con = Conexao.conectar();
-                    String sql = "SELECT * FROM login WHERE cpf = ? AND senha = UPPER(MD5(?)) AND situacao = ?;";
-                    PreparedStatement stmt = con.prepareStatement(sql);
-                    stmt.setString(1, etCpf.getText().toString());
-                    stmt.setString(2, etSenha.getText().toString());
-                    stmt.setString(3, situacao);
-                    ResultSet rs = stmt.executeQuery();
+                     try {
+                         Connection con = Conexao.conectar();
+                         String sql = "SELECT * FROM login WHERE cpf = ? AND senha = UPPER(MD5(?)) AND situacao = ?;";
+                         PreparedStatement stmt = con.prepareStatement(sql);
+                         stmt.setString(1, cpf);
+                         stmt.setString(2, senha);
+                         stmt.setString(3, situacao);
+                         ResultSet rs = stmt.executeQuery();
 
-                        if (rs.next()){
-                             if (situacao == "V"){
-                                // Navegar para a pagina voluntario
+                         if (rs.next()) {
+                             if (situacao.equals("V")) {
+                                 // Navegar para a pagina voluntario
                                  Toast.makeText(getApplicationContext(), "Navegando para Voluntario", Toast.LENGTH_SHORT).show();
-                            } else {
+                             } else {
                                  // Navegar para pagina Beneficiario
                                  Toast.makeText(getApplicationContext(), "Navegando para Beneficiario", Toast.LENGTH_SHORT).show();
                              }
-                        } else if ( cpf.isEmpty() || senha.isEmpty() || situacao == null){
-                            Toast.makeText(getApplicationContext(), "Todos os campos devem ser preenchidos", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Senha e(ou) Cpf inválidos", Toast.LENGTH_SHORT).show();
-                        }
+                         } else {
+                             Toast.makeText(getApplicationContext(), "Senha e(ou) Cpf inválidos", Toast.LENGTH_SHORT).show();
+                         }
 
-                        rs.close();
-                        stmt.close();
-                        con.close();
+                         rs.close();
+                         stmt.close();
+                         con.close();
 
 
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-
+                     } catch (SQLException e) {
+                         throw new RuntimeException(e);
+                     }
             }
         });
 

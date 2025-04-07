@@ -16,6 +16,9 @@
         android:theme="@style/Theme.CaminhoSolidario"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ListaEspera_voluntario"
+            android:exported="false" />
+        <activity
             android:name=".ui.CriarConta"
             android:exported="false" />
         <activity

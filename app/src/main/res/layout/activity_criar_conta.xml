@@ -45,7 +45,7 @@
         android:id="@+id/btCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#030B5C"
         android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,11 +83,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="431dp"
-        android:layout_height="241dp"
+        android:layout_width="402dp"
+        android:layout_height="229dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logodolado" />
+
+    <TextView
+        android:id="@+id/cadastrarVoluntario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Cadastrar como voluntário"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

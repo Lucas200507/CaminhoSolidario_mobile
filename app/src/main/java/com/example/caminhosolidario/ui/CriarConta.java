@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,6 +31,7 @@ public class CriarConta extends AppCompatActivity {
     EditText etCpf, etSenha, etConfSenha;
     ImageView seta_voltar;
     Button btCadastrar;
+    TextView cadastrarVoluntario;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,6 +50,7 @@ public class CriarConta extends AppCompatActivity {
         etConfSenha = findViewById(R.id.etConfSenha);
         seta_voltar = findViewById(R.id.seta_voltar);
         btCadastrar = findViewById(R.id.btCadastrar);
+        cadastrarVoluntario = findViewById(R.id.cadastrarVoluntario);
 
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +91,20 @@ public class CriarConta extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Os campos: senha e confirmar senha não estão idênticos", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        cadastrarVoluntario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent telaListaEspera = new Intent(CriarConta.this, ListaEspera_voluntario.class);
+                        startActivity(telaListaEspera);
+                        finish();
+                    }
+                }, 100);
             }
         });
 

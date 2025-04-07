@@ -52,42 +52,41 @@ public class CriarConta extends AppCompatActivity {
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String senha = etSenha.getText().toString();
+                String confSenha = etConfSenha.getText().toString();
+                String cpf = etCpf.getText().toString();
 
-                if (etCpf.getText().equals(null) || etConfSenha.getText().equals(null) || etSenha.getText().equals(null)){
+                if (senha.isEmpty() ||confSenha.isEmpty() || cpf.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Todos os campos devem ser preenchidos", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (senha.equals(confSenha) && !cpf.isEmpty()) {
+                    try {
+                        Connection con = Conexao.conectar();
+                        String sql = "INSERT INTO login (cpf, senha, situacao) VALUES(?,?,'B');";
+                        PreparedStatement stmt = con.prepareStatement(sql);
+                        stmt.setString(1, etCpf.getText().toString());
+                        stmt.setString(2, etConfSenha.getText().toString());
+                        stmt.execute();
 
-                    if (etConfSenha.equals(etSenha.getText())) {
-                        try {
-                            Connection con = Conexao.conectar();
-                            String sql = "INSERT INTO login (cpf, senha, situacao) VALUES(?,?,'B');";
-                            PreparedStatement stmt = con.prepareStatement(sql);
-                            stmt.setString(1, etCpf.getText().toString());
-                            stmt.setString(2, etConfSenha.getText().toString());
-                            stmt.execute();
+                        Toast.makeText(getApplicationContext(), "Sua conta foi cadastrada com sucesso", Toast.LENGTH_SHORT).show();
 
-                            Toast.makeText(getApplicationContext(), "Sua conta foi cadastrada com sucesso", Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent telaLogin = new Intent(CriarConta.this, login.class);
+                                startActivity(telaLogin);
+                                finish();
+                            }
+                        }, 500);
 
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Intent telaLogin = new Intent(CriarConta.this, login.class);
-                                    startActivity(telaLogin);
-                                    finish();
-                                }
-                            }, 1500);
+                        stmt.close();
+                        con.close();
 
-                            stmt.close();
-                            con.close();
-
-                        } catch (SQLException e) {
-                            throw new RuntimeException(e);
-                        }
-
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Os campos: senha e confirmar senha não estão idênticos", Toast.LENGTH_SHORT).show();
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
                     }
 
+                } else {
+                    Toast.makeText(getApplicationContext(), "Os campos: senha e confirmar senha não estão idênticos", Toast.LENGTH_SHORT).show();
                 }
             }
         });

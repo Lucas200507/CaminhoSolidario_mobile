@@ -57,7 +57,7 @@ public class login extends AppCompatActivity {
         rbVoluntario = findViewById(R.id.rbVoluntario);
         rbBeneficiario = findViewById(R.id.rbBeneficiario);
         btEntrar = findViewById(R.id.btEntrar);
-        cbLembrar = findViewById(R.id.btEntrar);
+        cbLembrar = findViewById(R.id.cbLembrar);
 
         rbVoluntario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +75,9 @@ public class login extends AppCompatActivity {
         btEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                String cpf = etCpf.getText().toString();
+                String senha = etSenha.getText().toString();
 
 
                 try {
@@ -94,7 +97,7 @@ public class login extends AppCompatActivity {
                                  // Navegar para pagina Beneficiario
                                  Toast.makeText(getApplicationContext(), "Navegando para Beneficiario", Toast.LENGTH_SHORT).show();
                              }
-                        } else if (etCpf.getText().equals(null) || etSenha.getText().equals(null) || situacao == null){
+                        } else if ( cpf.isEmpty() || senha.isEmpty() || situacao == null){
                             Toast.makeText(getApplicationContext(), "Todos os campos devem ser preenchidos", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getApplicationContext(), "Senha e(ou) Cpf inválidos", Toast.LENGTH_SHORT).show();
@@ -122,7 +125,7 @@ public class login extends AppCompatActivity {
                         startActivity(telaLogin);
                         finish();
                     }
-                }, 1000);
+                }, 500);
             }
         });
 

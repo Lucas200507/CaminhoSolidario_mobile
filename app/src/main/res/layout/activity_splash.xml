@@ -8,12 +8,12 @@
     tools:context=".ui.splash">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="727dp"
-        android:layout_height="626dp"
-        android:src="@drawable/logo_semnome"
+        android:id="@+id/imageView6"
+        android:layout_width="395dp"
+        android:layout_height="408dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_semnome" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,45 +11,33 @@
         android:id="@+id/etCpf"
         android:layout_width="310dp"
         android:layout_height="47dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/ic_launcher_background"
         android:backgroundTint="#030B5C"
         android:ems="10"
         android:hint="CPF:"
         android:inputType="text"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <EditText
-        android:id="@+id/etSenha"
-        android:layout_width="308dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/ic_launcher_background"
-        android:backgroundTint="#030B5C"
-        android:ems="10"
-        android:hint="Senha:"
-        android:inputType="textPassword"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/etConfSenha"
         android:layout_width="308dp"
         android:layout_height="44dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/ic_launcher_background"
         android:backgroundTint="#030B5C"
         android:ems="10"
         android:hint="Confirmar Senha:"
         android:inputType="textPassword"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSenha" />
 
@@ -57,13 +45,30 @@
         android:id="@+id/btCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#030B5C"
         android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etConfSenha" />
+
+    <EditText
+        android:id="@+id/etSenha"
+        android:layout_width="308dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#030B5C"
+        android:ems="10"
+        android:hint="Senha:"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
 
     <ImageView
         android:id="@+id/seta_voltar"
@@ -77,12 +82,12 @@
         app:srcCompat="@drawable/seta_voltar" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="647dp"
-        android:layout_height="267dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/imageView"
+        android:layout_width="431dp"
+        android:layout_height="241dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logodolado"
-        tools:layout_editor_absoluteX="-118dp" />
+        app:srcCompat="@drawable/logodolado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

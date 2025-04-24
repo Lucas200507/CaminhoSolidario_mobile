@@ -12,11 +12,9 @@ Abra o VSCode e cole suas modificações no repositório CaminhoSolidario_mobile
 
 
 ## Sobre
-  . Esse repositório, está hospedado o projeto web, contendo arquivos html, css e img. <br>
-  . Contém linguagens JavaScript e PHP nos arquivos html. <br>
-  . Há apenas um arquivo css, onde deverá ser linkado com todas as páginas html. <br>
-  . Os códigos JS devem ser interno. <br>
-
+  . Esse repositório, está hospedado o projeto mobile, contendo arquivos do AndroidStudio Projects. <br>
+  . Contém linguagem Java. <br>
+  
 ### 🔧 Commit
 Para fazer o commit, copie seu código;<br>
 No GitHub, abra o arquivo que copiou;<br>

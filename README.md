@@ -1,7 +1,7 @@
 # Caminho Solidário - Bárbara, Daiana e Lucas 
 
 Caminho Solidário é um projeto social que visa ajuda famílias carentes em sistuações de vulnerabilidade, com distribuição de cestas básicas e outros itens mensalmente. <br>
-Este repostirório terá como objetivo orientar o usuário o desevolvimento mobile do projeto.<br>
+Este repositório terá como objetivo orientar o usuário o desevolvimento mobile do projeto.<br>
 
 ## 🚀 Começando
 Acesse o Code do repositório;<br>

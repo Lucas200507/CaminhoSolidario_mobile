@@ -21,6 +21,7 @@ No GitHub, abra o arquivo que copiou;<br>
 cole o seu código funcional;<br>
 Faça o push e espere administrador verificar o seu código;<br>
 E repita até fazer todos os pushs de seus códigos;<br>
+
 ---
 
 ## 🫂❤️ Integrantes do Grupo

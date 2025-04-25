@@ -18,7 +18,7 @@ https://www.figma.com/design/LcHS4ID82PxC34UEfhqCiK/Mercado-Solid%C3%A1rio?node-
 
 ✔️ Removemos blocos de códigos desnecessários.
 
-✔️ Realizamos revisões de código para identificar erros e melhorias no código antes de integrá-lo ao projeto. 
+✔️ Realizamos revisões para identificar erros e melhorias no código antes de integrá-lo ao projeto. 
 
 
 ## 📌Considerações Finais

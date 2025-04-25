@@ -11,6 +11,7 @@
 
 https://www.figma.com/design/LcHS4ID82PxC34UEfhqCiK/Mercado-Solid%C3%A1rio?node-id=0-1&p=f&t=Y7DOkyfyRwPCGvIh-0
 
+---
 
  ## 📝 O que foi melhorado:
 

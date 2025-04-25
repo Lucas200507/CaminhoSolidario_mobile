@@ -20,12 +20,12 @@ https://www.figma.com/design/LcHS4ID82PxC34UEfhqCiK/Mercado-Solid%C3%A1rio?node-
 
 ✔️ Realizamos revisões para identificar erros e melhorias no código antes de integrá-lo ao projeto. 
 
-
+--- 
 ## 📌Considerações Finais
 
 Aplicando as boas práticas, compreendemos que um código limpo é primordial dentro de **qualquer** projeto. É essencial que todos consigam fazer alterações sempre que necessário, e comentários bem explicados é de grande auxilio.
 
-
+---
 
 
 ## 🫂❤️ Integrantes do Grupo

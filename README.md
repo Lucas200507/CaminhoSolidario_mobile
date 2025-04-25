@@ -14,7 +14,7 @@ https://www.figma.com/design/LcHS4ID82PxC34UEfhqCiK/Mercado-Solid%C3%A1rio?node-
 
  ## 📝 O que foi melhorado:
 
- ✔️ Como boas práticas, aplicamos comentários explicativos nos códigos que foram necessários para melhor entendimento, qualquer desenvolvedor que venha à aplicar manutenções terá uma fácil compreensão, podendo trabalhar tranquilamente no projeto.
+ ✔️ Como boas práticas, aplicamos comentários explicativos nos códigos que foram necessários para melhor o entendimento, qualquer desenvolvedor que venha à aplicar manutenções terá uma fácil compreensão, podendo trabalhar tranquilamente no projeto.
 
 ✔️ Removemos blocos de códigos desnecessários.
 
